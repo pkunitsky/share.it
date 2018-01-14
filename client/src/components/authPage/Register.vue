@@ -93,8 +93,8 @@
             email: this.registerEmail,
             password: this.registerPassword
           })
-          .then(res => console.log(res))
           .catch(err => console.log(err.toString()))
+          .then(res => {})
       }
     }
   }

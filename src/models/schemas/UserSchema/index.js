@@ -1,10 +1,11 @@
 const mongoose = require('mongoose')
 const bcrypt = require('bcryptjs')
-const UserPostSchema = require('./UserPostSchema')
+const PostSchema = require('./PostSchema')
 
 const UserSchema = new mongoose.Schema({
   firstname: String,
   lastname: String,
+  thumbnail: String,
   email: {
     type: String,
     unique: true,
@@ -14,7 +15,7 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
-  posts: [UserPostSchema]
+  posts: [PostSchema]
 })
 
 UserSchema.pre('save', function (next) {

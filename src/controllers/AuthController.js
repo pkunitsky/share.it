@@ -3,11 +3,24 @@ const User = mongoose.model('User')
 const jwt = require('jsonwebtoken')
 const config = require('../config')
 
-function jwtSignUser (user) {
-  const token = jwt.sign(user, config.jwtSecret, {
-    expiresIn: config.ONE_WEEK
+function jwtGetToken (user) {
+  const { expiresIn } = config.jwt
+  const token = jwt.sign(user, config.jwt.secret, {
+    expiresIn
   })
   return token
+}
+
+function jwtCheckToken (token) {
+  try {
+    const decoded = jwt.verify(token, config.jwt.secret)
+    return (decoded)
+      ? true
+      : false
+  } catch (err) {
+    console.log(err.toString())
+    return false
+  }
 }
 
 module.exports = {
@@ -26,10 +39,12 @@ module.exports = {
         console.log(err)
       })
   },
+
   login (req, res) {
     const { email, password } = req.body
 
     User.findOne({ email })
+      .catch(err => console.log(err.toString()))
       .then(async user => {
         const confirmed = await user.comparePassword(password)
         if (!confirmed) {
@@ -41,9 +56,24 @@ module.exports = {
 
         res.status(200).send({
           user,
-          token: jwtSignUser(user.toObject())
+          token: jwtGetToken(user.toObject())
         })
       })
-      .catch(err => console.log(err.toString()))
+  },
+
+  checkToken (req, res) {
+    const { token } = req.body
+
+    if (!token) {
+      res.send({
+        valid: false,
+        msg: 'no token provided'
+      })
+      return
+    }
+
+    res.send({
+      valid: jwtCheckToken(token)
+    })
   }
 }

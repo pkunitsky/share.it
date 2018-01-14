@@ -12,4 +12,9 @@ module.exports = app => {
     .post(
       AuthController.login
     )
+
+  app.route('/auth/check-token')
+    .post(
+      AuthController.checkToken
+    )
 }

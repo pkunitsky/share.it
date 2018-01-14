@@ -1,4 +1,4 @@
-# client
+# @share.it/client
 
 > A Vue.js project
 

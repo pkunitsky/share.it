@@ -1,19 +1,11 @@
 import axios from 'axios'
 
-class AuthService {
-  constructor () {
-    this.API = axios.create({
-      baseURL: 'http://localhost:8081/auth'
-    })
-  }
+const API = axios.create({
+  baseURL: 'http://localhost:8081/auth'
+})
 
-  register (user) {
-    return this.API.post('register', user)
-  }
-
-  login (user) {
-    return this.API.post('login', user)
-  }
+export default {
+  register: (user) => API.post('register', user),
+  login: (user) => API.post('login', user),
+  checkToken: (token) => API.post('check-token', { token })
 }
-
-export default new AuthService()

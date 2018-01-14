@@ -1,2 +1,7 @@
 db/data
-db/uploads
+db/files
+
+node_modules
+client/node_modules
+
+client/dist

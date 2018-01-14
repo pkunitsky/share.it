@@ -8,20 +8,41 @@
         <form @submit.prevent="onSubmit">
   
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-            <label class="mdl-textfield__label mdl-color-text--grey" for="#loginEmail">Email</label>
-            <input class="mdl-textfield__input" type="text" id="loginEmail" v-model="loginEmail" />
+            <label
+              class="mdl-textfield__label mdl-color-text--grey"
+              for="#loginEmail">
+              Email
+            </label>
+            <input
+              class="mdl-textfield__input"
+              type="text"
+              id="loginEmail"
+              v-model="loginEmail"
+            />
           </div>
   
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
-            <label class="mdl-textfield__label mdl-color-text--grey" for="#loginPassword">Password</label>
-            <input class="mdl-textfield__input" type="password" id="loginPassword" v-model="loginPassword" />
+            <label
+              class="mdl-textfield__label mdl-color-text--grey"
+              for="#loginPassword">
+              Password
+            </label>
+            <input
+              class="mdl-textfield__input"
+              type="password"
+              id="loginPassword"
+              v-model="loginPassword" />
           </div>
   
           <div class="mdl-cell mdl-cell--12-col">
-            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-color-text--grey-600">
+            <button
+              @click.prevent="() => null"
+              class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-color-text--grey-600">
               Login with Google
             </button>
-            <button type="submit" class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored">
+            <button
+              type="submit" 
+              class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored">
               Login
             </button>
           </div>
@@ -33,6 +54,7 @@
 
 <script>
   import AuthService from '@/services/AuthService'
+  import { mapMutations } from 'vuex'
 
   export default {
     data () {
@@ -42,6 +64,7 @@
       }
     },
     methods: {
+      ...mapMutations(['setToken']),
       onSubmit () {
         AuthService
           .login({
@@ -50,7 +73,7 @@
           })
           .then(res => {
             if (res.status === 200) {
-              this.$store.commit('setToken', res.data.token)
+              this.setToken(res.data.token)
               this.$router.push('/')
             }
           })
@@ -58,9 +81,3 @@
     }
   }
 </script>
-
-<style scoped>
-  .util-forgot-password {
-    font-size: 1rem;
-  }
-</style>

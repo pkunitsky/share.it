@@ -1,13 +1,12 @@
 const path = require('path')
-const multer = require('multer')
-const uploadsDir = '../db/uploads'
+const uploadsDir = '../db/files'
+const config = require('../config')
 
 module.exports = app => {
   app.route('/:userID/upload')
     .post(
       (req, res, next) => {
-        console.log(req.loggedIn)
-        console.log(req.params.userID)
+        `http://rsz.io/${config.domain}/`
         next()
       }
     )

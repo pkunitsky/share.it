@@ -5,12 +5,20 @@ import App from './App'
 import store from './store'
 import router from './router'
 import { sync } from 'vuex-router-sync'
+import nprogress from 'nprogress'
 
+/* js */
+import 'material-design-lite/material.min.js'
+import '../static/particles.js'
+
+/* css */
 import './assets/css/bootstrap-grid.min.css'
 import 'material-design-lite/dist/material.blue-teal.min.css'
-import 'material-design-lite/material.min.js'
+import 'nprogress/nprogress.css'
 
+/* configurations */
 Vue.config.productionTip = false
+nprogress.configure({ showSpinner: false })
 
 sync(store, router)
 
@@ -19,6 +27,6 @@ new Vue({
   el: '#app',
   router,
   store,
-  template: '<App/>',
-  components: { App }
+  components: { App },
+  template: '<App/>'
 })
