@@ -1,6 +1,5 @@
 # @share.it/app
-## share.it is mini social app for sharing posts and chatting
-### greatly inspired by Twitter
+> Social app for sharing posts and chatting. greatly inspired by Twitter
 
 
 # how to start?
