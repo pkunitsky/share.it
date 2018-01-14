@@ -1,5 +1,5 @@
-# share.it
-> Social app for sharing posts and chatting. Greatly inspired by Twitter
+# Share.it
+> Share.it is social app for sharing posts and chatting. Greatly inspired by Twitter
 
 
 # How to start?
