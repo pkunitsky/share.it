@@ -1,5 +1,5 @@
-# @share.it/app
-> Social app for sharing posts and chatting. greatly inspired by Twitter
+# share.it
+> Social app for sharing posts and chatting. Greatly inspired by Twitter
 
 
 # how to start?
