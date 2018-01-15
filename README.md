@@ -3,9 +3,11 @@
 > Check out deployed product here -> https://share-it-app.herokuapp.com
 
 
-### How to start?
-1. run `npm install` or `yarn install`
-1. run `npm start` or `yarn start`
+### Want to install share.it and check it out locally?
+To start in production mode (using yarn)
+1. `yarn install`
+1. `cd client && yarn install && yarn build`
+1. find ".env.example" in "./tests/production_test"
 
 
 #### Client todos

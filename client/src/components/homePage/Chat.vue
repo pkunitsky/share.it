@@ -3,7 +3,7 @@
     <ul class="chat">
       <li class="msg" v-for="msg in 10">
         <div class="msg__left">
-          <img class="msg__thumbnail" src="@/assets/png/profile.png">
+          <img class="msg__thumbnail" src="/static/png/profile.png">
         </div>
         <div class="msg__body">
           <div class="msg__details details">

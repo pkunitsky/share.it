@@ -21,10 +21,10 @@
             Share.it connects everyone worldwide. Get the most recent news, meet new people and keep in touch with friends!
           </p>
           <a class="mobile-app-link" href="#">
-            <img class="mobile-app-logo" src="../assets/png/play-market.png" alt="share.it play market app">
+            <img class="mobile-app-logo" src="/static/png/play-market.png" alt="share.it play market app">
           </a>
           <a class="mobile-app-link" href="#">
-            <img class="mobile-app-logo" src="../assets/png/app-store.png" alt="share.it app store app">
+            <img class="mobile-app-logo" src="/static/png/app-store.png" alt="share.it app store app">
           </a>
         </div>
       </div>
