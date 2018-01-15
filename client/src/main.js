@@ -9,7 +9,6 @@ import nprogress from 'nprogress'
 
 /* js */
 import 'material-design-lite/material.min.js'
-import '../static/particles.js'
 
 /* css */
 import './assets/css/bootstrap-grid.min.css'

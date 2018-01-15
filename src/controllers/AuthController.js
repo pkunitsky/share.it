@@ -51,7 +51,6 @@ module.exports = {
       .then(async user => {
         if (!user) {
           res.status(401).send({
-            user,
             error: `It seems we don't have an account for this email address (${email})`
           })
           return
