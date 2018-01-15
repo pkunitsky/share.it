@@ -6,8 +6,8 @@
 To start in production mode (yarn)
 1. run `yarn install`
 1. run `cd client && yarn install && yarn build && cd ..`
-1. find `.env.example` in `tests/production_test`
-1. rename it `.env.example` -> `.env`
+1. find `.env.example` file in `tests/production_test`
+1. rename it to `.env`
 1. edit `.env` variables the way it suits you
 1. run `yarn run production_test`
 
