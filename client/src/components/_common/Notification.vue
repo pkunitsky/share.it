@@ -8,16 +8,11 @@
 
 <script>
   export default {
-    props: ['type'],
+    props: {
+      type: String
+    },
     computed: {
       modifier: `alert--${this.type}`
     }
   }
 </script>
-
-<style>
-  .alert {}
-  .alert--danger {}
-  .alert--warning {}
-  .alert--primary {}
-</style>
