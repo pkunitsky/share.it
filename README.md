@@ -26,4 +26,4 @@ To start in production mode (yarn)
 
 #### Client + Server
 - [ ] Socket.io chat integration
-- [ ] Fix heroku deployment crash
+- [x] Fix heroku deployment crash
