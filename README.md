@@ -15,6 +15,7 @@
 - [ ] Finish components: Chat, Wall
 - [ ] Modals
 - [ ] Custom scroll bars
+- [ ] Lost connection notification
 
 #### Server todos
 - [ ] Saving posts
