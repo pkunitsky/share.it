@@ -9,5 +9,5 @@ if (process.env.NODE_ENV !== 'production') {
   
   dotenv.config({ path: dotEnvPath })
   console.log(`using .env configuration \nmode: ${process.env.NODE_ENV} \nmongoURI: ${process.env.MONGO_URI} \ndomain: ${process.env.DOMAIN}`)
-  require('../../src/app.js')
+  require('../../lib/app.js')
 }
