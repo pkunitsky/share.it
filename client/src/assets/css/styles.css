@@ -1,0 +1,83 @@
+:root {
+  --primary-1: #1da1f2;
+  --primary-2: #1B95E0;
+}
+
+html,
+body,
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.app-container {
+  user-select: none;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+html,
+body,
+*,
+*::placeholder {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500 !important;
+}
+
+a {
+  color: #0070c9;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+.mdl-textfield__valid {
+  color: #00c853;
+  position: absolute;
+  font-size: 12px;
+  margin-top: 3px;
+  visibility: hidden;
+  display: block;
+}
+.mdl-textfield.is-valid .mdl-textfield__input {
+  border-color: #00c853;
+  box-shadow: none;
+}
+.mdl-textfield--floating-label.is-valid .mdl-textfield__label {
+  color: #00c853;
+  font-size: 12px;
+}
+.mdl-textfield.is-valid .mdl-textfield__label:after {
+  background-color: #00c853;
+}
+.mdl-textfield.is-valid .mdl-textfield__valid {
+  visibility: visible;
+}

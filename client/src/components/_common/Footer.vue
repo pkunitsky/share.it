@@ -56,7 +56,7 @@
   a {
     font-size: 12px;
     font-weight: 500;
-    color: #999;
+    color: #0070c9;
     text-decoration: none;
   }
 

@@ -13,8 +13,9 @@ import '../static/particles.js'
 
 /* css */
 import './assets/css/bootstrap-grid.min.css'
-import 'material-design-lite/dist/material.blue-teal.min.css'
+import 'material-design-lite/dist/material.blue-indigo.min.css'
 import 'nprogress/nprogress.css'
+import './assets/css/styles.css'
 
 /* configurations */
 Vue.config.productionTip = false
@@ -30,3 +31,4 @@ new Vue({
   components: { App },
   template: '<App/>'
 })
+

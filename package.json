@@ -7,8 +7,10 @@
   "license": "MIT",
   "scripts": {
     "db:dev": "mongod --dbpath \"./db/data\"",
+    "seed:dev": "node ./seed",
     "server:dev": "nodemon ./src/app.js",
     "client:dev": "npm run dev --prefix client",
+
     "server": "node ./src/app.js",
     "client": "npm start --prefix client",
     "prestart": "npm install --prefix client && npm run build --prefix client",
@@ -23,7 +25,8 @@
     "jsonwebtoken": "^8.1.0",
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
-    "passport": "^0.4.0"
+    "passport": "^0.4.0",
+    "validator": "^9.2.0"
   },
   "devDependencies": {
     "nodemon": "^1.14.10"

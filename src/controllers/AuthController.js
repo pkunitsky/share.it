@@ -36,7 +36,7 @@ module.exports = {
         res.send(user)
       })
       .catch(err => {
-        console.log(err)
+        res.status(400).send(err)
       })
   },
 
@@ -44,7 +44,9 @@ module.exports = {
     const { email, password } = req.body
 
     User.findOne({ email })
-      .catch(err => console.log(err.toString()))
+      .catch(err => {
+        res.status(400).send(err)
+      })
       .then(async user => {
         const confirmed = await user.comparePassword(password)
         if (!confirmed) {

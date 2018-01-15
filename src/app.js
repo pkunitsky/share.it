@@ -6,22 +6,8 @@ const mongoose = require('mongoose')
 const config = require('./config')
 
 require('./models')
-require('./middlewares')(app)
+require('./middlewares/global')(app)
 require('./routes')(app)
-
-
-if (process.env.NODE_ENV === 'production') {
-  const path = require('path')
-  const distDir = path.join(__dirname, '../client/dist')
-
-  app.use(express.static(distDir))
-  app.get('*', (req, res) => {
-    res.sendFile(
-      path.join(distDir, 'index.html')
-    )
-  })
-}
-
 
 mongoose.Promise = Promise
 mongoose

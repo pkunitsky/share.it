@@ -25,7 +25,7 @@
               type="password"
               id="textfield_new_password"
               v-model="registerPassword"
-              pattern="^.{8,32}$"
+              pattern="^.{6,32}$"
             />
             <span class="mdl-textfield__error">
               Password should be at least 6 and not more than 32 characters long

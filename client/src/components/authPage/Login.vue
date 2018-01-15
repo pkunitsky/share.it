@@ -17,8 +17,7 @@
               class="mdl-textfield__input"
               type="text"
               id="loginEmail"
-              v-model="loginEmail"
-            />
+              v-model="loginEmail" />
           </div>
   
           <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label mdl-cell mdl-cell--12-col">
@@ -41,7 +40,7 @@
               Login with Google
             </button>
             <button
-              type="submit" 
+              type="submit"
               class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored">
               Login
             </button>
