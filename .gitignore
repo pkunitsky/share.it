@@ -7,5 +7,5 @@ temporary
 
 node_modules
 
-client
+client/*
 !client/dist
