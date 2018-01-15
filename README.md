@@ -1,4 +1,5 @@
 # Share.it
+###### https://share-it-app.herokuapp.com
 > Share.it is social app for sharing posts and chatting. Greatly inspired by Twitter
 
 
