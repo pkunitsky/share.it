@@ -6,7 +6,7 @@
   "main": "./src/app.js",
   "license": "MIT",
   "scripts": {
-    "test:prod": "node ./tests/production_test",
+    "production_test": "node ./tests/production_test",
     "db:dev": "mongod --dbpath \"./db/data\"",
     "seed:dev": "node ./db/seed",
     "server:dev": "nodemon ./src/app.js",
