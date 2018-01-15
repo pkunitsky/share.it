@@ -9,5 +9,5 @@ node_modules
 client/node_modules
 
 client/**
-client/\!dist
+\!client/dist
 
