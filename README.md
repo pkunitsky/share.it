@@ -8,14 +8,15 @@
 
 
 #### Client todos
-1. Add loading animations to async client buttons
-1. Add loading animations for 
-1. Pop-up notifications (bootstrap alerts)
-1. Finish components: Chat, Wall
+- [ ] Add loading animations to async client buttons
+- [ ] Add loading animations for 
+- [ ] Pop-up notifications (bootstrap alerts)
+- [ ] Finish components: Chat, Wall
+- [ ] Modals
 
 #### Server todos
-1. Saving posts
-1. Saving chats
+- [ ] Saving posts
+- [ ] Saving chats
 
 #### Client + Server
-1. Socket.io chat integration
+- [ ] Socket.io chat integration
