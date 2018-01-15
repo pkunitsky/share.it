@@ -23,6 +23,7 @@ To start in production mode:
 - [ ] Lost connection notification
 - [ ] Chat message response reactions
 - [ ] Chat emojis
+- [ ] Make some screenshots for repo
 #### Server
 - [ ] Saving posts
 - [ ] Saving chats
