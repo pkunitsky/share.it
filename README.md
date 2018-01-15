@@ -14,6 +14,7 @@
 - [ ] Pop-up notifications (bootstrap alerts)
 - [ ] Finish components: Chat, Wall
 - [ ] Modals
+- [ ] Custom scroll bars
 
 #### Server todos
 - [ ] Saving posts
@@ -21,3 +22,4 @@
 
 #### Client + Server
 - [ ] Socket.io chat integration
+- [ ] Fix heroku deployment crash
