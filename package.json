@@ -3,16 +3,16 @@
   "version": "1.0.0",
   "description": "share.it app",
   "author": "Paul <let.it.music@gmail.com>",
-  "main": "./src/app.js",
+  "main": "./lib/app.js",
   "license": "MIT",
   "scripts": {
     "production_test": "npm run prestart && node ./tests/production_test",
     "db:dev": "mongod --dbpath \"./db/data\"",
     "seed:dev": "node ./db/seed",
-    "server:dev": "nodemon ./src/app.js",
+    "server:dev": "nodemon ./lib/app.js",
     "client:dev": "cd client && npm run dev",
     "prestart": "cd client && npm install && npm run build && cd ..",
-    "start": "node ./src/app.js"
+    "start": "node ./lib/app.js"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
