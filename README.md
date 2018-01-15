@@ -12,7 +12,8 @@ To start in production mode:
 1. edit `.env` variables the way it suits you
 1. run `yarn run production_test`
 
-#### Client todos
+### Todos
+#### Client
 - [ ] Add loading animations to async client buttons
 - [ ] Add loading animations for 
 - [ ] Pop-up notifications (bootstrap alerts)
@@ -20,11 +21,11 @@ To start in production mode:
 - [ ] Modals
 - [ ] Custom scroll bars
 - [ ] Lost connection notification
-
-#### Server todos
+- [ ] Chat message response reactions
+- [ ] Chat emojis
+#### Server
 - [ ] Saving posts
 - [ ] Saving chats
-
 #### Client + Server
 - [ ] Socket.io chat integration
 - [x] Fix heroku deployment crash
