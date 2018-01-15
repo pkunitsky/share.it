@@ -7,7 +7,7 @@
   "license": "MIT",
   "scripts": {
     "db:dev": "mongod --dbpath \"./db/data\"",
-    "seed:dev": "node ./seed",
+    "seed:dev": "node ./db/seed",
     "server:dev": "nodemon ./src/app.js",
     "client:dev": "npm run dev --prefix client",
 

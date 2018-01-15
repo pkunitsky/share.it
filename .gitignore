@@ -1,5 +1,5 @@
-db/data
-db/files
+db/data/**
+db/files/**
 
 node_modules
 client/node_modules
