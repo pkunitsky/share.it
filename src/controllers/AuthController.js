@@ -43,11 +43,20 @@ module.exports = {
   login (req, res) {
     const { email, password } = req.body
 
-    User.findOne({ email })
+    User
+      .findOne({ email })
       .catch(err => {
         res.status(400).send(err)
       })
       .then(async user => {
+        if (!user) {
+          res.status(401).send({
+            user,
+            error: `It seems we don't have an account for this email address (${email})`
+          })
+          return
+        }
+
         const confirmed = await user.comparePassword(password)
         if (!confirmed) {
           res.status(401).send({
@@ -69,7 +78,7 @@ module.exports = {
     if (!token) {
       res.send({
         valid: false,
-        msg: 'no token provided'
+        error: 'no token provided'
       })
       return
     }

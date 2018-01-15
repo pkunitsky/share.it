@@ -6,13 +6,11 @@
   "main": "./src/app.js",
   "license": "MIT",
   "scripts": {
-    "server:prod--test": "node ./tests/production_server",
+    "test:prod": "node ./tests/production_test",
     "db:dev": "mongod --dbpath \"./db/data\"",
     "seed:dev": "node ./db/seed",
     "server:dev": "nodemon ./src/app.js",
     "client:dev": "npm run dev --prefix client",
-    "server": "node ./src/app.js",
-    "client": "npm start --prefix client",
     "prestart": "npm install --prefix client && npm run build --prefix client",
     "start": "npm run server"
   },
