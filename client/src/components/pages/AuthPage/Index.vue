@@ -17,19 +17,18 @@
 </template>
 
 <script>
-  import Welcome from '@/components/authPage/Welcome'
-  import Login from '@/components/authPage/Login'
-  import Register from '@/components/authPage/Register'
-  import Footer from '@/components/_common/Footer'
+  import Welcome from './Welcome'
+  import Login from './Login'
+  import Register from './Register'
 
   import particlesConfig from '@/assets/json/particles.config.json'
 
   export default {
+    name: 'AuthPage',
     components: {
       Welcome,
       Login,
-      Register,
-      Footer
+      Register
     },
     mounted () {
       window.particlesJS.load('particles', particlesConfig)
@@ -48,8 +47,5 @@
     left: 0;
     width: 100%;
     height: 100%;
-  }
-  .flex-grow {
-    flex-grow: 1;
   }
 </style>

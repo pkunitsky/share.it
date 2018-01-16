@@ -6,8 +6,8 @@ import store from '@/store'
 import TokenChecker from '../utils/TokenChecker'
 
 /* page components */
-import auth from '@/pages/auth'
-import home from '@/pages/home'
+import AuthPage from '@/components/pages/AuthPage'
+import HomePage from '@/components/pages/HomePage'
 
 
 Vue.use(Router)
@@ -17,7 +17,7 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: home,
+      component: HomePage,
       beforeEnter: (to, from, next) => {
         const { token } = store.state
         if (!token) {
@@ -31,7 +31,7 @@ const router = new Router({
     },
     {
       path: '/auth',
-      component: auth,
+      component: AuthPage,
       beforeEnter: (to, from, next) => {
         const { token } = store.state
         if (token) {

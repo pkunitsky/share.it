@@ -6,7 +6,6 @@
 </template>
 
 <script>
-  import Nav from '@/components/_common/Nav'
   import TokenChecker from '@/utils/TokenChecker'
   import { mapState } from 'vuex'
   
@@ -25,9 +24,6 @@
     },
     created () {
       TokenChecker.checkEvery()
-    },
-    components: {
-      Nav
     }
   }
 </script>

@@ -42,7 +42,7 @@
             <button
               type="submit"
               class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--raised mdl-button--colored">
-              Login
+              <div>Login</div>
             </button>
           </div>
         </form>
