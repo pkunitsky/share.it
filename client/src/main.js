@@ -5,16 +5,16 @@ import App from './App'
 import store from './store'
 import router from './router'
 import { sync } from 'vuex-router-sync'
+
+/* bootstrap-grid */
+import '@/assets/css/bootstrap-grid.min.css'
+
+/* nprogress */
+import 'nprogress/nprogress.css'
 import nprogress from 'nprogress'
 
-/* css */
-import '@/assets/css/bootstrap-4.0.0-beta.3.min.css'
-import 'material-design-lite/dist/material.blue-indigo.min.css'
-import 'nprogress/nprogress.css'
+/* styles.css */
 import '@/assets/css/styles.css'
-
-/* js */
-import 'material-design-lite/material.min.js'
 
 /* global vue components */
 import Nav from '@/components/global/Nav'

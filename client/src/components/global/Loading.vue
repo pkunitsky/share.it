@@ -1,17 +1,14 @@
 <template>
-  <div>
-    <div
-      v-if="type === 'dots'"
-      class="loading-dots">
-      <span>•</span>
-      <span>•</span>
-      <span>•</span>  
-    </div>
-    
-    <div
-      v-if="type === 'spinner'"
-      class="mdl-spinner mdl-spinner--single-color mdl-js-spinner is-active">
-    </div>
+  <div
+    v-if="type === 'spinner'">
+  </div>
+
+  <div
+    v-else  
+    class="loading-dots">
+    <span>•</span>
+    <span>•</span>
+    <span>•</span>  
   </div>
 </template>
 

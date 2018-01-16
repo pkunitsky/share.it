@@ -1,14 +1,13 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import nprogress from 'nprogress'
-import store from '@/store'
-
-import TokenChecker from '../utils/TokenChecker'
 
 /* page components */
 import AuthPage from '@/components/pages/AuthPage'
 import HomePage from '@/components/pages/HomePage'
+import TestPage from '@/components/pages/TestPage'
 
+/* route guards */
+import { RouterGuard, AuthGuard } from './Guards'
 
 Vue.use(Router)
 
@@ -17,57 +16,27 @@ const router = new Router({
   routes: [
     {
       path: '/',
-      component: HomePage,
-      beforeEnter: (to, from, next) => {
-        const { token } = store.state
-        if (!token) {
-          /* if no token -> redirect to auth page */
-          next({ path: '/auth' })
-          return
-        }
-
-        next()
-      }
+      exact: true,
+      component: HomePage
     },
     {
       path: '/auth',
       component: AuthPage,
-      beforeEnter: (to, from, next) => {
-        const { token } = store.state
-        if (token) {
-          next({ path: '/' })
-          return
+      beforeEnter: AuthGuard.beforeEnter,
+      children: [
+        {
+          path: 'logout',
+          beforeEnter: AuthGuard.logout.beforeEnter
         }
-        next()
-      }
+      ]
     },
     {
-      path: '/logout',
-      beforeEnter: (to, from, next) => {
-        store.commit('setToken', null)
-
-        next({ path: '/auth' })
-      }
+      path: '/test',
+      component: TestPage
     }
   ]
 })
 
-router.beforeEach((to, from, next) => {
-  const { token } = store.state
-  
-  if (!token) {
-    next()
-    return
-  }
-
-  nprogress.start()
-  TokenChecker
-    .check(token)
-    .then(valid => {
-      if (!valid) store.commit('setToken', null)
-      nprogress.done()
-      next()
-    })
-})
+router.beforeEach(RouterGuard.beforeEach)
 
 export default router

@@ -17,7 +17,8 @@
       </li>
     </ul>
     <form class="chat-form">
-      <Loading type="spinner"/>
+      <div class="mdl-spinner mdl-js-spinner is-active"></div>
+      <Loading type="spinner" />
       <textarea
         class="chat-form__textarea"
         rows="2"
