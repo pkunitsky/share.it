@@ -6,18 +6,18 @@
 To start in production mode:
 ``` bash
 # install dependencies
-`npm install` # or yarn
+npm install # or yarn
 
 # install client dependencies and build for production
-`cd client && npm install && npm build && cd ..`
+cd client && npm install && npm build && cd ..
 
 # setup .env variables
-find `.env.example` file in `tests/production_test`
-rename it to `.env`
-edit `.env` variables the way it suits you
+find .env.example file in tests/production_test
+rename it to .env
+edit .env variables the way it suits you
 
 # run server locally in production mode
-`yarn run production_test`
+yarn run production_test
 ```
 
 ### Todos
