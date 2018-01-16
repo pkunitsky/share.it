@@ -13,8 +13,8 @@
 cd client && npm install && npm build && cd ..
 
 # setup .env variables
-find `.env.example` file in `tests/production_test`
-rename it to `.env` and setup variables to suit you
+# find ".env.example" file in "tests/production_test"
+# rename it to ".env" and setup variables to suit you
 
 # run server locally in production mode
 `npm run production_test`
