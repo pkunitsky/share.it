@@ -11,7 +11,7 @@ import nprogress from 'nprogress'
 import 'material-design-lite/material.min.js'
 
 /* css */
-import './assets/css/bootstrap-grid.min.css'
+import './assets/css/bootstrap-4.0.0-beta.3.min.css'
 import 'material-design-lite/dist/material.blue-indigo.min.css'
 import 'nprogress/nprogress.css'
 import './assets/css/styles.css'
