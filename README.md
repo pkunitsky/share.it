@@ -7,7 +7,7 @@
 
 ``` bash
 # install dependencies
-`npm install` # or yarn
+npm install # or yarn
 
 # install client dependencies and build for production
 cd client && npm install && npm build && cd ..
@@ -17,7 +17,7 @@ cd client && npm install && npm build && cd ..
 # rename it to ".env" and setup variables to suit you
 
 # run server locally in production mode
-`npm run production_test`
+npm run production_test
 ```
 
 ### Todos
