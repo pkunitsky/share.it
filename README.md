@@ -11,12 +11,13 @@
 
 # install client dependencies and build for production
 cd client && npm install && npm build && cd ..
+```
 
 # setup .env variables
-find .env.example file in tests/production_test
-rename it to .env
-edit .env variables the way it suits you
+find `.env.example` file in `tests/production_test`
+rename it to `.env` and setup variables to suit you
 
+``` bash
 # run server locally in production mode
 yarn run production_test
 ```
