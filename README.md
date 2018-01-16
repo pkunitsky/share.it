@@ -5,7 +5,7 @@
 ### Want to install share.it and check it out locally?  
 **To start in production mode:**
 
-```
+``` bash
 # install dependencies
 npm install # or yarn
 
