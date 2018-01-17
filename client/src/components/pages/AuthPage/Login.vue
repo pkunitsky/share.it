@@ -24,10 +24,9 @@
         ></v-text-field>
       </v-card-text>
       <v-card-actions>
-          <v-btn
-            @click.prevent="notify">
-            Show Notification
-          </v-btn>       
+        <v-btn>
+          Show Notification
+        </v-btn>       
         <v-spacer/>
         <v-btn
           flat>
@@ -45,10 +44,8 @@
 
 <script>
   import AuthService from '@/services/AuthService'
-  import _notifications from '@/mixins/_notifications'
 
   export default {
-    mixins: [_notifications],
     data () {
       return {
         valid: false,
@@ -66,11 +63,6 @@
       }
     },
     methods: {
-      notify () {
-        this.showSuccessMsg({
-          title: 'Awww yeah!!'
-        })
-      },
       onSubmit () {
         AuthService
           .login({
@@ -87,11 +79,9 @@
           })
       },
       watch: {
-        error (message) {
-          if (message) {
-            this.showErrorMsg({
-              message
-            })
+        error (err) {
+          if (err) {
+            err.toString()
           }
         }
       }
