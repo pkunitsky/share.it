@@ -1,48 +1,47 @@
 <template>
-  <div class="footer-wrapper">
-    <div class="container-fluid">
-      <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Help Center</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Status</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy Policy</a></li>
-        <li><a href="#">Cookies</a></li>
-        <li><a href="#">Ads info</a></li>
-        <li><a href="#">Brand</a></li>
-        <li><a href="#">Apps</a></li>
-        <li><a href="#">Advertise</a></li>
-        <li><a href="#">Marketing</a></li>
-        <li><a href="#">Business</a></li>
-        <li><a href="#">Developers</a></li>
-        <li><a href="#">Settings</a></li>
-        <li>&copy; 2018 Share.it</li>
-      </ul>
-    </div>
+  <div class="Footer">
+    <v-container fluid class="util-container-fluid--narrow">
+      <nav class="Footer-nav">
+          <a class="Footer-nav__item" href="#">About</a>
+          <a class="Footer-nav__item" href="#">Help Center</a>
+          <a class="Footer-nav__item" href="#">Blog</a>
+          <a class="Footer-nav__item" href="#">Status</a>
+          <a class="Footer-nav__item" href="#">Jobs</a>
+          <a class="Footer-nav__item" href="#">Terms</a>
+          <a class="Footer-nav__item" href="#">Privacy Policy</a>
+          <a class="Footer-nav__item" href="#">Cookies</a>
+          <a class="Footer-nav__item" href="#">Ads info</a>
+          <a class="Footer-nav__item" href="#">Brand</a>
+          <a class="Footer-nav__item" href="#">Apps</a>
+          <a class="Footer-nav__item" href="#">Advertise</a>
+          <a class="Footer-nav__item" href="#">Marketing</a>
+          <a class="Footer-nav__item" href="#">Business</a>
+          <a class="Footer-nav__item" href="#">Developers</a>
+          <a class="Footer-nav__item" href="#">Settings</a>
+      </nav>
+      <div class="Footer-copy">
+        <span class="Footer-nav__item">&copy; 2018 Share.it</span>
+      </div>
+    </v-container>
   </div>
 </template>
 
 <style scoped>
-  .footer-wrapper {
-    background: #fff;
+  .Footer {
     border-top: 1px solid #e6ecf0;
+    background: #fff;
   }
-
-  ul {
+  .Footer-nav {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
     flex-direction: row;
     width: 100%;
-    padding: 11px 0;
     margin-left: auto;
     margin-right: auto;
   }
-
-  li {
+  .Footer-nav__item {
     display: inline-block;
     padding: 0 11px;
     word-spacing: 1px;
@@ -52,15 +51,20 @@
     font-size: 12px;
     font-weight: 500;
   }
-
-  a {
+  a.Footer-nav__item {
     font-size: 12px;
     font-weight: 500;
     color: #0070c9;
     text-decoration: none;
   }
-
-  a:hover {
+  a.Footer-nav__item:hover {
     text-decoration: underline !important;
+  }
+  .Footer-copy {
+    text-align: center;
+    margin-top: 5px;
+  }
+  .util-container-fluid--narrow {
+    padding: 9px 6px;
   }
 </style>

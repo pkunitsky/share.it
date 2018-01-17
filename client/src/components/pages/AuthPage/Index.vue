@@ -1,19 +1,21 @@
 <template>
-  <div class="app-container">
-    <div class="row no-gutters flex-grow bg">
+  <v-container fluid class="container--flex">
+    <v-layout class="AuthPage-hero flex-grow" row wrap>
       <div id="particles"></div>
-      <div class="col-md-8">
+      <v-flex md6 lg8>
         <Welcome/>
-      </div>
-      <div class="col-md-4">
-        <div class="mdl-grid">
-          <Login/>
-          <Register/>
-        </div>
-      </div>
-    </div>
-    <Footer/>
-  </div>
+      </v-flex>
+      <v-flex md6 lg4>
+        <Login/>
+        <Register/>
+      </v-flex>
+    </v-layout>
+    <v-layout row>
+      <v-flex xs12>
+        <Footer/>
+      </v-flex>
+    </v-layout>
+  </v-container>
 </template>
 
 <script>
@@ -36,10 +38,11 @@
   }
 </script>
 
-<style scoped>
-  .bg {
+<style>
+  .AuthPage-hero {
     position: relative;
     background-color: #1da1f2;
+    padding-bottom: 12px;
   }
   #particles {
     position: absolute;
@@ -47,5 +50,28 @@
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none;
+    z-index: 1;
+  }
+  .Register,
+  .Login,
+  .Welcome {
+    z-index: 2;
+  }
+
+  .container--flex {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .flex-grow {
+    flex-grow: 1 !important;
+  }
+
+  .AuthPage-form {
+    width: 90%;
+    max-width: 384px;
+    margin: 16px auto;
   }
 </style>
