@@ -19,11 +19,13 @@
     <form
       @submit.prevent="onSubmit"
       class="chat-form">
-      <textarea
-        class="chat-form__textarea"
-        rows="2"
-        placeholder="Type your message">
-      </textarea>
+      <v-text-field
+        class="chat-form__textfield"
+        label="Type your message"
+        v-model="message"
+        full-width
+        multi-line
+      ></v-text-field>
       <v-btn
         type="submit"
         round color="primary"
@@ -46,7 +48,8 @@
   export default {
     data () {
       return {
-        requestPending: false
+        requestPending: false,
+        message: null
       }
     },
 
@@ -88,12 +91,12 @@
     padding: 5px 12px;
     background: #F2F5F8;
   }
-  .chat-form__textarea {
+  .chat-form__textfield {
     resize: none;
     width: 100%;
     border: none;
     padding: 10px 20px;
-    font-size: 12px;
+    font-size: 12px !important;
     line-height: 22px;
     border-radius: 5px;
     margin-top: 5px;
