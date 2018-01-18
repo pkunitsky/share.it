@@ -43,15 +43,11 @@
 </template>
 
 <script>
-  import { mapState } from 'vuex'
+  import { mapMutations } from 'vuex'
   import io from 'socket.io-client'
   const socket = io(process.env.DOMAIN)
 
   export default {
-    computed: {
-      ...mapState(['messages'])
-    },
-
     data () {
       return {
         requestPending: false,
