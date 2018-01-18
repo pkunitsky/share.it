@@ -6,4 +6,4 @@ db/files/**
 temporary
 
 node_modules
-client/node_modules
+lib/client/node_modules

@@ -9,9 +9,9 @@
     "db:dev": "mongod --dbpath \"./db/data\"",
     "seed:dev": "node db/seed",
     "server:dev": "nodemon lib/app.js",
-    "client:dev": "npm run dev --prefix client",
-    "client:build": "npm run build --prefix client",
-    "production_test": "node lib/tests/production_test",    
+    "client:dev": "npm run dev --prefix lib/client",
+    "client:build": "npm run build --prefix lib/client",
+    "production_test": "node lib/tests/production_test",
     "start": "node lib/app.js"
   },
   "dependencies": {
@@ -24,6 +24,7 @@
     "mongoose": "^4.13.9",
     "morgan": "^1.9.0",
     "passport": "^0.4.0",
+    "socket.io": "^2.0.4",
     "validator": "^9.2.0"
   },
   "devDependencies": {

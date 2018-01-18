@@ -22,8 +22,8 @@ npm run production_test
 
 ### Todos
 #### Client
-- [ ] Add loading animations to async client buttons
-- [ ] Notifications
+- [x] Add loading animations to async client buttons
+- [x] Notifications
 - [ ] Finish components: Chat, Wall
 - [ ] Modals
 - [ ] Custom scroll bars
