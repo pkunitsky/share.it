@@ -26,10 +26,8 @@ currently working on: Socket.io
 #### Client
 - [x] Add loading animations to async client buttons
 - [x] Notifications
-- [ ] Finish components: Chat, Wall
-- [ ] Modals
+- [ ] Finish chat
 - [ ] Custom scroll bars
-- [ ] Lost connection notification
 - [ ] Chat message response reactions
 - [ ] Chat emojis
 - [ ] Make some screenshots for repo
