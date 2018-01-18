@@ -24,9 +24,6 @@
         ></v-text-field>
       </v-card-text>
       <v-card-actions>
-        <v-btn>
-          Show Notification
-        </v-btn>       
         <v-spacer/>
         <v-btn
           flat>
@@ -71,12 +68,16 @@
           })
           .then(res => {
             const { user, token } = res.data
+
+            if (!user && !token) {
+              console.log(res.data)
+              return
+            }
+
             this.$store.commit('setUser', user)
             this.$store.commit('setToken', token)
           })
-          .catch(err => {
-            this.error = err.toString()
-          })
+          .catch(err => this.notify('error', err.toString()))
       },
       watch: {
         error (err) {
