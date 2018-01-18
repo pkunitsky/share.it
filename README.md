@@ -21,6 +21,8 @@ npm run production_test
 ```
 
 ### Todos
+currently working on: Socket.io
+
 #### Client
 - [x] Add loading animations to async client buttons
 - [x] Notifications

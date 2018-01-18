@@ -20,32 +20,38 @@
       @submit.prevent="onSubmit"
       class="chat-form">
       <v-text-field
+        @keyup.enter="onSubmit"
         class="chat-form__textfield"
-        label="Type your message"
+        placeholder="Type your message"
         v-model="message"
         full-width
         multi-line
       ></v-text-field>
+      <v-btn icon>
+        <v-icon>attach_file</v-icon>
+      </v-btn>
       <v-btn
         type="submit"
         round color="primary"
         :loading="requestPending"
         :disabled="requestPending">
+        <span slot="loader">Sending..</span>
         send it
-      </v-btn>
-      <v-btn icon>
-        <v-icon>attach_file</v-icon>
       </v-btn>
     </form>
   </div>
 </template>
 
 <script>
-  import ChatService from '@/services/ChatService'
+  import { mapState } from 'vuex'
   import io from 'socket.io-client'
   const socket = io(process.env.DOMAIN)
 
   export default {
+    computed: {
+      ...mapState(['messages'])
+    },
+
     data () {
       return {
         requestPending: false,
@@ -54,18 +60,31 @@
     },
 
     methods: {
+      ...mapMutations(['saveMessage']),
       onSubmit () {
-        ChatService
-          .sendMessage()
+        if (!this.message) return
+
+        this.requestPending = true
+
+        socket.on('connection', _ => {
+          // loading
+        })
+
+        socket.emit('message:sent', {
+          userID: this.$store.state.user._id,
+          message: this.message
+        })
+        socket.on('message:sent', _ => {
+          this.saveMessage('')
+        })
+
+        socket.on('message:received', _ => {
+          this.message = null
+          this.requestPending = false
+        })
+        
+        socket.on('messages')
       }
-    },
-    created () {
-      socket.on('connect', () => {
-        console.log('connected to server')
-      })
-      socket.on('disconnect', () => {
-        console.log('disconnected from server')
-      })
     }
   }
 </script>
