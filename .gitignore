@@ -3,7 +3,5 @@
 db/data/**
 db/files/**
 
-temporary
-
 node_modules
 lib/client/node_modules

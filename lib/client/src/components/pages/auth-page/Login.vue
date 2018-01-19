@@ -78,8 +78,7 @@
             notify(`Welcome ${name}!`, {
               timeout: 1000
             })
-            this.$store.commit('setUser', user)
-            this.$store.commit('setToken', token)
+            this.$store.dispatch('login', {user, token})
           })
           .catch(err => {
             this.requestPending = false

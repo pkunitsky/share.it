@@ -25,7 +25,7 @@ currently working on: Socket.io
 
 #### Client
 - [x] Add loading animations to async client buttons
-- [x] Notifications
+- [ ] Remove "No internet connection" notification as connection returns
 - [ ] Finish chat
 - [ ] Custom scroll bars
 - [ ] Chat message response reactions

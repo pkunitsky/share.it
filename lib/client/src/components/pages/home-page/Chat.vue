@@ -32,10 +32,7 @@
       </v-btn>
       <v-btn
         type="submit"
-        round color="primary"
-        :loading="requestPending"
-        :disabled="requestPending">
-        <span slot="loader">Sending..</span>
+        round color="primary">
         send it
       </v-btn>
     </form>
@@ -43,7 +40,6 @@
 </template>
 
 <script>
-  import { mapMutations } from 'vuex'
   import io from 'socket.io-client'
   const socket = io(process.env.DOMAIN)
 
@@ -55,32 +51,36 @@
       }
     },
 
+    computed: {
+      messages: {
+        get () {return this.$store.state.messages},
+        set (v) {this.$store.commit('messages', v)}
+      }
+    },
+
     methods: {
-      ...mapMutations(['saveMessage']),
       onSubmit () {
         if (!this.message) return
-
-        this.requestPending = true
-
-        socket.on('connection', _ => {
-          // loading
-        })
-
-        socket.emit('message:sent', {
-          userID: this.$store.state.user._id,
-          message: this.message
-        })
-        socket.on('message:sent', _ => {
-          this.saveMessage('')
-        })
-
-        socket.on('message:received', _ => {
-          this.message = null
-          this.requestPending = false
-        })
         
-        socket.on('messages')
+        const msg = {
+          from: 'Me',
+          text: this.message
+        }
+        this.$store.state.messages.push(msg)
+        this.message = null
+        socket.emit('broadcast', {
+          emitName: 'msg:sent',
+          emitData: {
+            ...msg,
+            from: this.$store.state.firstname
+          }
+        })
       }
+    },
+    created () {
+      // register listeners
+      socket.on('msgs', msgs => this.messages = msgs)
+      socket.on('msg:sent', msg => this.$store.state.messages.push(msg))
     }
   }
 </script>

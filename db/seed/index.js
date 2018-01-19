@@ -5,8 +5,8 @@
 function seed () {
   const Promise = require('bluebird')
   const mongoose = require('mongoose')
-
   const config = require('../../lib/config')
+  
   const { User } = require('../../lib/models')
   const users = require('./users.json')
 
