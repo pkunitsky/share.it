@@ -10,11 +10,13 @@
     "messages":[
       {
         "from": "12345",
-        "text": "hello"
+        "text": "hello",
+        "dateSent": "12345"
       },
       {
         "from": "12345",
-        "text": "hello"
+        "text": "hello",
+        "dateSent": "12345"
       }
     ]
   }

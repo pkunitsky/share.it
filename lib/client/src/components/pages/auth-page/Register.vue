@@ -13,12 +13,14 @@
           label="Full name"
           v-model="fullname"
           :rules="fullnameRules"
+          validate-on-blur
           required
         ></v-text-field>
         <v-text-field
           label="E-mail"
           v-model="email"
           :rules="emailRules"
+          validate-on-blur
           required
         ></v-text-field>
         <v-text-field
@@ -26,6 +28,7 @@
           v-model="password"
           type="password"
           :rules="passwordRules"
+          validate-on-blur
           required
         ></v-text-field>
         <v-text-field
@@ -33,6 +36,7 @@
           v-model="confirmPassword"
           type="password"
           :rules="confirmPasswordRules"
+          validate-on-blur
           required
         ></v-text-field>
       </v-card-text>
