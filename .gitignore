@@ -5,3 +5,5 @@ db/files/**
 
 node_modules
 lib/client/node_modules
+
+lib/client/etc
