@@ -1,13 +1,5 @@
 <template>
-  <div class="container">
-  </div>
-</template>
-
-<script>
-  
-  export default {
-    name: 'TestPage',
-    components: {
-    }
-  }
-</script>
+    <div>
+      Test Page
+    </div>
+  </template>

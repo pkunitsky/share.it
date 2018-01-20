@@ -1,15 +1,20 @@
 <template>
   <div class="nav">
-    <router-link class="nav__link" exact to="/">home</router-link>
     <router-link class="nav__link" exact to="/auth">auth</router-link>
+    <router-link class="nav__link" exact to="/news">news</router-link>
+    <router-link class="nav__link" exact to="/profile">profile</router-link>
+    <router-link class="nav__link" exact to="/chat">chat</router-link>
     <router-link class="nav__link" exact to="/test">test</router-link>
-    <router-link class="nav__link" exact to="/auth/logout">logout</router-link>
+    <router-link class="ml-auto nav__link" exact to="/auth/logout">logout</router-link>
   </div>
 </template>
 
 <style scoped>
-  nav {
+  .nav {
     display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
   }
   .nav__link {
     display: inline-block;

@@ -19,10 +19,9 @@
     <form
       @submit.prevent="onSubmit"
       class="chat-form">
-
       <v-text-field
         @keyup.enter="onSubmit"
-        v-model="message"
+        v-model="msg"
         placeholder="Type your message"
         multi-line
         rows="2"
@@ -41,95 +40,47 @@
 </template>
 
 <script>
-  import io from 'socket.io-client'
+  // import io from 'socket.io-client'
+  import UserService from '@/services/UserService'
   import moment from 'moment'
-  import {mapState} from 'vuex'
-  import notify from '@/utils/notify'
 
   export default {
-    data () {
-      return {
-        chats: [],
-        socket: null,
-        message: null,
-        requestPending: false,
-      }
-    },
-
-    filters: {
-      time (v) {
-        return moment(v).fromNow()
-      }
-    },
-
     computed: {
-      ...mapState(['user']),
-      messages: {
-        get () {return this.$store.state.messages},
-        set (v) {this.$store.commit('messages', v)}
+      msgs () {
+        const i = this.talks.findIndex(
+          t => t.talkName === this.currentTalkName
+        )
+        if (i === -1) return null
+
+        return this.talks[i].msgs
       }
+    },
+
+    data: {
+      msg: null,
+      socket: null,
+      currentTalkName: null,
+      talks: []
     },
 
     methods: {
       onSubmit () {
-        if (!this.message) return
-
-        this.message = null
-        const msg = {
-          from: 'Me',
-          text: this.message,
-          dateSent: moment()
-        }
-        
-        this.$store.state.messages.push(msg)
-        this.socket.emit('broadcast', {
-          emitName: 'msg:sent',
-          emitData: {
-            ...msg,
-            from: this.user._id
-          }
+        this.socket.emit('msg:send', {
+          talk: this.currentTalkName,
+          msg: this.msg
         })
-      },
-
-      onJoin (chatID) {
-        const chatIndex = this.chats.findIndex(chat => chat._id === chatID)
-        const chatID = this.chats[chatIndex]._id
-
-        this.socket.emit('broadcast', {
-          emitName: 'chat:user-joined',
-          emitData: chatID
-        })
+        this.msg = null
       }
     },
 
     created () {
-      // connect
-      this.socket = io(`${process.env.DOMAIN}?userID=${this.user._id}`)
+      UserService.init()
+      this.talks = UserService.getTalks()
 
-      // register event listeners
-      this.socket.on('chats', chats => this.chats = chats)
-      this.socket.on('chats:404', err => notify(err))
-
-
-      this.socket.on('chat:user-joined', ({chat, user}) => {
-        const chatIndex = this.chats.findIndex(c => c._id === chat._id)
-        if (chatIndex === -1) return
-
-        this.chats[chatIndex].users.push(user)
+      this.socket = io()
+      this.socket.on('msg:send', ({talk, msg}) => {
+        this.msgs.push(msg)
       })
-      this.socket.on('chat:user-left', ({chat, user}) => {
-        const chatIndex = this.chats.findIndex(c => c._id === chat._id)
-        if (!chatIndex) return
-
-        const userIndex = this.chats[chatIndex].users.findIndex(u => u._id === user._id)
-        if (!userIndex) return
-
-        this.chats[chatIndex].users.splice(userIndex, 1)
-      })
-
-
-      this.socket.on('msgs', msgs => this.messages = msgs)
-      this.socket.on('msg:sent', msg => this.messages.push(msg))
     }
   }
 </script>

@@ -17,6 +17,11 @@
     },
     watch: {
       token (value) {
+        if (process.env.NODE_ENV === 'development') {
+          console.log('checker disabled for a while for client development')
+          return
+        }
+        
         if (!value) {
           this.$router.push('/auth')
         } else {

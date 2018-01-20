@@ -74,7 +74,7 @@
             password: this.password
           })
           .then(res => {
-            const { user, token } = res.data
+            const {user, token} = res.data
             const name = user.fullname.split(' ')[0]
             this.requestPending = false
             notify(`Welcome ${name}!`, {
@@ -84,7 +84,8 @@
           })
           .catch(err => {
             this.requestPending = false
-            notify(err.response.data.error)
+            const {error} = err.response.data
+            notify(error)
           })
       }
     }

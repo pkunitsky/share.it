@@ -31,6 +31,8 @@ currently working on: Socket.io
 - [ ] Chat message response reactions
 - [ ] Chat emojis
 - [ ] Make some screenshots for repo
+- [ ] Chat input focus faded placeholder
+- [ ] vk active tab design
 #### Server
 - [ ] Saving posts
 - [ ] Saving chats
