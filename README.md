@@ -1,5 +1,5 @@
 # Share.it
-> Share.it is an online news and social networking service. Inspired by Twitter.  
+> Share.it is an online news and social networking service.
 > Check out deployed product here -> https://share-it-app.herokuapp.com
 
 ### Want to install share.it and check it out locally?  
