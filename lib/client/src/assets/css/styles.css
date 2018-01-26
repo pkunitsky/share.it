@@ -1,0 +1,135 @@
+html,
+body {
+  user-select: none;
+}
+
+*,
+*:after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+}
+
+html,
+body,
+*,
+*::placeholder {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  padding: 0;
+  color: #333;
+  background-color: #fff;
+}
+
+html,
+body,
+.application {
+  overflow: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500 !important;
+}
+
+.card { border-radius: .25rem }
+.pagination__item {
+  width: auto !important;
+  min-width: 34px !important;
+}
+
+/* talks search bar */
+.input-group.input-group--solo { background-color: transparent !important }
+.theme--dark .input-group--focused .icon { color: #fff !important }
+
+.toolbar__textfield {
+  flex: 1 !important; 
+  width: 100% !important;
+  box-shadow: none !important;
+  margin-left: 0 !important;
+}
+.count-v-img { display: none !important }
+
+.list {
+  width: 100%;
+}
+.toolbar {
+  box-shadow: none;
+  border-bottom: 1px solid rgba(0,0,0, 0.12) !important;
+}
+.center {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.theme--dark .toolbar { border-bottom-color: #ffffff1f !important }
+.theme--dark .card { border: 1px solid #ffffff1f !important }
+.theme--dark .chat-header { border-color: #ffffff1f }
+
+.theme--light .toolbar .icon { color: #6f6f6f !important }
+
+.navigation-drawer .list__tile:hover { background: none }
+/* light theme customizations for drawer */
+.theme--light .navigation-drawer .list__tile { opacity: 0.70 !important; }
+.theme--light .navigation-drawer .list__tile--active {
+  opacity: 1 !important;
+  color: rgba(0,0,0, 0.87) !important;
+  background: rgba(0,0,0,.12) !important;
+}
+.theme--light .navigation-drawer .list__tile--active .list__tile__content { color: rgba(0,0,0, 0.87) !important; }
+.theme--light .navigation-drawer .list__tile--active .icon { color: rgba(0,0,0, 0.87) !important; }
+
+/* dark theme customizations for drawer */
+.theme--dark .navigation-drawer .list__tile { opacity: 0.45 !important; }
+.theme--dark .navigation-drawer .list__tile--active {
+  opacity: 1 !important;
+  color: #fff !important;
+  background: rgba(0,0,0,.12) !important;
+}
+.theme--dark .navigation-drawer .list__tile--active .list__tile__content { color: #fff !important; }
+.theme--dark .navigation-drawer .list__tile--active .icon { color: #fff !important; }
+/* #232323 */
+.theme--dark .navigation-drawer { background-color: #111111 !important }
+.theme--dark .navigation-drawer .list { background-color: #111111 !important }
+.application.theme--dark { background-color: #111111 !important }
+.theme--dark .toolbar { background-color: #1a1a1a !important }
+.theme--dark .card { background-color: #1a1a1a !important }
+.theme--dark .list { background-color: #1a1a1a !important }
+.theme--dark .primary--text { color: #111111 !important }
+
+/* light theme pagination */
+.theme--light .pagination__item { color: rgba(0,0,0, 0.60) !important }
+.theme--light .pagination__item--active { color: #fff !important }
+
+/* dark theme pagination */
+.theme--dark .pagination__item { color: #ffffffcc !important }
+.theme--dark .pagination__navigation .icon { color: #ffffffcc !important }
+.theme--dark .pagination__navigation--disabled .icon { color: #aaa !important; background-color: #1a1a1a !important }
+.theme--dark .pagination__item--active { color: #aaa !important; background-color: #212121 !important }
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+  height: 0;
+  font-size: 0;
+}
+
+.header-v-img,
+.footer-v-img {
+  background-color: transparent !important;
+}
