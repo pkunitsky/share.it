@@ -4,8 +4,10 @@
 
 <img width="90%" src="https://user-images.githubusercontent.com/29762363/35476582-81d7e6e6-03c3-11e8-9ae4-b7e5f2fde7a8.png" alt="winner-first" />
 
-<img width="50%" src="https://user-images.githubusercontent.com/29762363/35476584-8230d198-03c3-11e8-91d5-d2aeb348ccec.png" alt="winner-3" />
-<img width="50%" src="https://user-images.githubusercontent.com/29762363/35476585-8250d48e-03c3-11e8-9cb2-c337af0810a5.png" alt="winner-4" />
+<div style="display: flex">
+  <img src="https://user-images.githubusercontent.com/29762363/35476584-8230d198-03c3-11e8-91d5-d2aeb348ccec.png" alt="winner-3" />
+  <img src="https://user-images.githubusercontent.com/29762363/35476585-8250d48e-03c3-11e8-9cb2-c337af0810a5.png" alt="winner-4" />
+</div>
 
 <img width="50%" src="https://user-images.githubusercontent.com/29762363/35476586-826f56f2-03c3-11e8-985e-ad556c29b443.png" alt="winner-5" />
 <img width="50%" src="https://user-images.githubusercontent.com/29762363/35476587-828c3da8-03c3-11e8-81fc-88dd519fcb3f.png" alt="winner-6" />
