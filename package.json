@@ -13,6 +13,7 @@
     "client:dev": "npm run dev --prefix client",
     "client:build": "npm run build --prefix client",
     "production_test": "node lib/tests/production_test",
+    "prestart": "npm run build --prefix client",
     "start": "node lib/app.js"
   },
   "dependencies": {
