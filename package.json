@@ -7,11 +7,8 @@
   "license": "MIT",
   "scripts": {
     "db:dev": "mongod --dbpath \"./db/data\"",
-    "seed:dev": "node db/seed",
-    "server": "node lib/app.js",
-    "server:dev": "nodemon lib/app.js",
-    "client:dev": "npm run dev --prefix client",
-    "client:build": "npm run build --prefix client",
+    "db:seed-local": "node db/seed",    
+    "dev": "nodemon lib/app.js",
     "production_test": "node lib/tests/production_test",
     "start": "node lib/app.js"
   },
