@@ -2,16 +2,9 @@
 > Share.it is an online news and social networking service.
 > Check out deployed product here -> https://share-it-app.herokuapp.com
 
-<img width="90%" src="https://user-images.githubusercontent.com/29762363/35476582-81d7e6e6-03c3-11e8-9ae4-b7e5f2fde7a8.png" alt="winner-first" />
-
-<img width="35%" src="https://user-images.githubusercontent.com/29762363/35476584-8230d198-03c3-11e8-91d5-d2aeb348ccec.png" alt="winner-3" />
-<img width="35%" src="https://user-images.githubusercontent.com/29762363/35476585-8250d48e-03c3-11e8-9cb2-c337af0810a5.png" alt="winner-4" />
-
-<img width="50%" src="https://user-images.githubusercontent.com/29762363/35476586-826f56f2-03c3-11e8-985e-ad556c29b443.png" alt="winner-5" />
-<img width="50%" src="https://user-images.githubusercontent.com/29762363/35476587-828c3da8-03c3-11e8-81fc-88dd519fcb3f.png" alt="winner-6" />
-
-<img width="90%" src="https://user-images.githubusercontent.com/29762363/35476588-82a7e922-03c3-11e8-8b4e-fe8fb6044cb4.png" alt="winner-7" />
-<img width="90%" src="https://user-images.githubusercontent.com/29762363/35476583-820b9982-03c3-11e8-98be-f34ad9f71e7f.png" alt="winner-last" />
+![social network share.it](https://user-images.githubusercontent.com/29762363/35476582-81d7e6e6-03c3-11e8-9ae4-b7e5f2fde7a8.png)
+![share.it mobile](https://user-images.githubusercontent.com/29762363/35476773-b794837c-03c6-11e8-8418-f07db3572e6e.jpg)
+![social network share.it](https://user-images.githubusercontent.com/29762363/35476583-820b9982-03c3-11e8-98be-f34ad9f71e7f.png)
 
 ### Want to install share.it and check it out locally?  
 **To start locally in production mode:**
