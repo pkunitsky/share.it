@@ -27,21 +27,18 @@ npm run production_test
 ```
 
 ### Todos
-currently working on: Socket.io
 
 #### Client
-- [x] Add loading animations to async client buttons
-- [ ] Remove "No internet connection" notification as connection returns
-- [ ] Finish chat
-- [ ] Custom scroll bars
-- [ ] Chat message response reactions
-- [ ] Chat emojis
-- [ ] Make some screenshots for repo
-- [ ] Chat input focus faded placeholder
-- [ ] vk active tab design
+- [x] add loading animations to async client buttons
+- [ ] progress bar (+ fails)
+- [ ] implement scroll and fix
+- [ ] improve notifications system
+- [ ] remove "No internet connection" notification as connection returns
+- [ ] chat message response reactions
+- [ ] chat emojis
 #### Server
 - [ ] Saving posts
 - [ ] Saving chats
 #### Client + Server
-- [ ] Socket.io chat integration
+- [ ] Socket.io chat
 - [x] Fix heroku deployment crash
