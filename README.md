@@ -1,5 +1,5 @@
 # Share.it
-> Share.it is an online news and social networking service.
+> Share.it is an online news and social networking service.  
 > Check out deployed product here -> https://share-it-app.herokuapp.com
 
 ![social network share.it](https://user-images.githubusercontent.com/29762363/35476582-81d7e6e6-03c3-11e8-9ae4-b7e5f2fde7a8.png)
