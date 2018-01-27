@@ -3,9 +3,9 @@
 > Check out deployed product here -> https://share-it-app.herokuapp.com
 
 ![social network share.it](https://user-images.githubusercontent.com/29762363/35476582-81d7e6e6-03c3-11e8-9ae4-b7e5f2fde7a8.png)
-<br><br>
+<br><br><br><br>
 ![share.it mobile](https://user-images.githubusercontent.com/29762363/35476773-b794837c-03c6-11e8-8418-f07db3572e6e.jpg)
-<br><br>
+<br><br><br><br>
 ![social network share.it](https://user-images.githubusercontent.com/29762363/35476583-820b9982-03c3-11e8-98be-f34ad9f71e7f.png)
 
 ### Want to install share.it and check it out locally?  
